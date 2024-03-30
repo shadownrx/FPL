@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plan de Vuelo</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+    <h1>Plan de Vuelo</h1>
+
+    <img src="assets/img/pngwing.com.png" alt="Logo de mi página" class="logo">
+
+    <div class="formulario">
+        <label for="altitud">Altitud:</label>
+        <input type="text" id="altitud">
+
+        <label for="velocidad">Velocidad Aproximada:</label>
+        <input type="text" id="velocidad">
+
+        <label for="ruta">Ruta:</label>
+        <input type="text" id="ruta">
+
+        <label for="pasajeros">Pasajeros:</label>
+        <input type="text" id="pasajeros">
+
+        <label for="avion">Avión:</label>
+        <select id="avion">
+            <option value="avion1">B777</option>
+            <option value="avion2">B737</option>
+            <option value="avion3">B73M</option>
+        </select>
+
+        <label for="formato">Formato:</label>
+        <select id="formato">
+            <option value="FMC">.FMC</option>
+            <option value="FPL">.FPL</option>
+            <option value="PLN">.PLN</option>
+        </select>
+
+        <label for="modo-oscuro">Modo Oscuro:</label>
+        <input type="checkbox" id="modo-oscuro" onchange="toggleModoOscuro()">
+
+        <button onclick="crearPlanVuelo()">Crear Plan de Vuelo</button>
+    </div>
+
+    <div class="metar-input">
+        <label for="codigo-icao">Código ICAO:</label>
+        <input type="text" id="codigo-icao">
+        <div id="metar-info">
+            <p id="temperatura"></p>
+            <p id="descripcion"></p>
+        </div>
+    </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
